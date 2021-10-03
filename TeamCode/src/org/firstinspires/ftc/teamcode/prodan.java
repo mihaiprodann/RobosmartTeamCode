@@ -34,6 +34,7 @@ public class prodan extends LinearOpMode {
 
         telemetry.update();
     }
+
     public void robotSpeed(DcMotor mo1, DcMotor mo2, DcMotor mo3, DcMotor mo4, double speed)
     {
         mo1.setPower(speed);
@@ -68,7 +69,6 @@ public class prodan extends LinearOpMode {
             m4.setDirection(DcMotor.Direction.REVERSE);
         }
     }
-
     public void drive(String direction, DcMotor mo1, DcMotor mo2, DcMotor mo3, DcMotor mo4,  int leftTarget, int rightTarget, double speed) {
         leftPos += leftTarget;
         rightPos += rightTarget;
