@@ -20,7 +20,7 @@ public class prodan extends LinearOpMode {
         rightPos = 0;
 
         waitForStart();
-        //hooooopa
+
 
         DcMotor m1 = hardwareMap.dcMotor.get("back_left_motor");
         DcMotor m2 = hardwareMap.dcMotor.get("front_left_motor");
