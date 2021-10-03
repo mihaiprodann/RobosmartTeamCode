@@ -18,8 +18,8 @@
             <fill>
                 <RadialGradient centerX="0.4722222222222222" centerY="0.4666666666666667" radius="0.6046511627906976">
                     <stops>
-                        <Stop color="#3900ff" />
-                        <Stop color="#ff00b6" offset="0.15649563534383953" />
+                        <Stop color="#fdfff0"/>
+                        <Stop color="#fff3e7" offset="0.15649563534383953" />
                         <Stop color="#ff1100" offset="0.32195757791207485" />
                         <Stop color="#ffee00" offset="0.4880910060433701" />
                         <Stop color="#18ff00" offset="0.675751471343366" />
