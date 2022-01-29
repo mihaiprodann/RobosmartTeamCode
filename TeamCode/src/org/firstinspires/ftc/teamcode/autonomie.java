@@ -35,6 +35,7 @@ public class autonomie extends LinearOpMode {
     }
 
     public void set_robot_direction(String direction) {
+        /* TODO: adaugat directii noi (https://gm0.org/en/latest/_images/mecanum-drive-directions.png) */
         switch (direction) {
             default:
                 return;
@@ -44,7 +45,7 @@ public class autonomie extends LinearOpMode {
                 robot.back_left.setDirection(DcMotor.Direction.FORWARD);
                 robot.front_left.setDirection(DcMotor.Direction.FORWARD);
             }
-            case "back": {
+            case "backward": {
                 robot.front_right.setDirection(DcMotor.Direction.FORWARD);
                 robot.back_right.setDirection(DcMotor.Direction.FORWARD);
                 robot.back_left.setDirection(DcMotor.Direction.REVERSE);
