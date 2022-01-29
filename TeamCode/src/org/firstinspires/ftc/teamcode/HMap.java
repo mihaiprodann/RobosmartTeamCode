@@ -1,22 +1,20 @@
 package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 public class HMap {
-    public DcMotor back_left = null;
-    public DcMotor front_left = null;
-    public DcMotor front_right = null;
-    public DcMotor back_right = null;
-    public DcMotor Arm = null;
-    public DcMotor carousel = null;
-    public DcMotor ramp = null;
-
-    HardwareMap hwmap = null;
+    public DcMotor back_left = null,
+            front_left = null,
+            front_right = null,
+            back_right = null,
+            Arm = null,
+            carousel = null,
+            ramp = null;
     public ElapsedTime runtime = new ElapsedTime();
 
-    //public void FreightFrenzyHardwareMap() {}
+    HardwareMap hwmap = null;
 
     public void init(HardwareMap hmap) {
         /* TODO: de modificat ordinea */
@@ -61,7 +59,6 @@ public class HMap {
         back_right.setPower(0);
 
     }
-
 
 
 }

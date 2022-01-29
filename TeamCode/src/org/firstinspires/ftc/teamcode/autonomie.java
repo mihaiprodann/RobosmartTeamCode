@@ -3,18 +3,16 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 
 @Autonomous(name = "Autonomie", group = "Autonomie")
 
 public class autonomie extends LinearOpMode {
 
-    HMap robot = new HMap();
-
     // pozitie robot
     public int leftPos = 0;
     public int rightPos = 0;
+    HMap robot = new HMap();
 
     @Override
     public void runOpMode() {

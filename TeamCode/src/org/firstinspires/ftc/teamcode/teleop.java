@@ -1,4 +1,4 @@
-package  org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -26,12 +26,12 @@ Gamepad 2:
 
 public class teleop extends LinearOpMode {
 
-    public double   horizontal = 0,
-                    vertical = 0,
-                    pivot = 0,
-                    speed_percent = 100,
-                    arm_pos = 0,
-                    carousel_active = 0;
+    public double horizontal = 0,
+            vertical = 0,
+            pivot = 0,
+            speed_percent = 100,
+            arm_pos = 0,
+            carousel_active = 0;
 
     @Override
     public void runOpMode() {
@@ -47,7 +47,7 @@ public class teleop extends LinearOpMode {
 
         waitForStart();
 
-        while(opModeIsActive()) {
+        while (opModeIsActive()) {
             robot.front_right.setPower(((pivot + (vertical + horizontal)) * speed_percent) / 100);
             robot.front_left.setPower(((pivot + (vertical - horizontal)) * speed_percent) / 100);
             robot.back_left.setPower(((pivot + (vertical - horizontal)) * speed_percent) / 100);
@@ -60,34 +60,34 @@ public class teleop extends LinearOpMode {
 
             robot.carousel.setPower(carousel_active / 4);
 
-            while(gamepad1.dpad_up)
-                if(speed_percent <= 90)
+            while (gamepad1.dpad_up)
+                if (speed_percent <= 90)
                     speed_percent += 10;
 
-            while(gamepad1.dpad_down)
-                if(speed_percent >= 20)
+            while (gamepad1.dpad_down)
+                if (speed_percent >= 20)
                     speed_percent -= 10;
 
-            if(speed_percent > 100) speed_percent = 100;
-            if(speed_percent < 10) speed_percent = 10;
+            if (speed_percent > 100) speed_percent = 100;
+            if (speed_percent < 10) speed_percent = 10;
 
-            while(gamepad2.right_trigger > 0) {
+            while (gamepad2.right_trigger > 0) {
                 robot.ramp.setDirection(DcMotorSimple.Direction.FORWARD);
                 robot.ramp.setPower(gamepad2.right_trigger);
             }
 
-            while(gamepad2.left_trigger > 0) {
+            while (gamepad2.left_trigger > 0) {
                 robot.ramp.setDirection(DcMotorSimple.Direction.REVERSE);
                 robot.ramp.setPower(gamepad2.left_trigger / 7);
             }
 
-            while(gamepad2.dpad_up) {
+            while (gamepad2.dpad_up) {
                 robot.Arm.setDirection(DcMotorSimple.Direction.FORWARD);
                 robot.Arm.setPower(0.5);
                 arm_pos++;
             }
 
-            while(gamepad2.dpad_down) {
+            while (gamepad2.dpad_down) {
                 robot.Arm.setDirection(DcMotorSimple.Direction.REVERSE);
                 robot.Arm.setPower(0.5);
                 arm_pos--;
