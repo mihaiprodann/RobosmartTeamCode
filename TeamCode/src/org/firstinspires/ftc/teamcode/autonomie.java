@@ -8,7 +8,6 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 @Autonomous(name = "Autonomie", group = "Autonomie")
 
 public class autonomie extends LinearOpMode {
-
     // pozitie robot
     public int leftPos = 0;
     public int rightPos = 0;
@@ -25,7 +24,7 @@ public class autonomie extends LinearOpMode {
         telemetry.update();
     }
 
-    public void robotSpeed(double speed) {
+    public void set_robot_speed(double speed) {
         robot.back_left.setPower(speed);
         robot.back_right.setPower(speed);
         robot.front_left.setPower(speed);
@@ -80,7 +79,7 @@ public class autonomie extends LinearOpMode {
         robot.back_right.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         robot.front_right.setMode(DcMotor.RunMode.RUN_TO_POSITION);
 
-        robotSpeed(speed);
+        set_robot_speed(speed);
 
         while (opModeIsActive() && robot.front_left.isBusy() && robot.back_left.isBusy() && robot.back_right.isBusy() && robot.front_right.isBusy()) {
             idle();
