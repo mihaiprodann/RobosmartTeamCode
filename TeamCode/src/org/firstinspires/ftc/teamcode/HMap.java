@@ -17,7 +17,7 @@ public class HMap {
     HardwareMap hwmap = null;
 
     public void init(HardwareMap hmap) {
-        /* TODO: de modificat ordinea */
+        /* TODO: de adaugat motoarele in driver controller */
         hwmap = hmap;
 
         // Motoare roti
