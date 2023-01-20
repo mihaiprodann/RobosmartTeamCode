@@ -8,7 +8,7 @@ This repository contains the Java code that was written for the Robosmart high s
 * Programmed mecanum wheels for precise and versatile movement
 
 # Usage 📲
-* Clone the repository to your local machine using the command <kbd> git clone https://github.com/mihaiprodann/robosmart.git </kbd>
+* Clone the repository to your local machine using the command <kbd> git clone https://github.com/mihaiprodann/RobosmartTeamCode.git </kbd>
 * Open the Java files in an IDE of your choice
 * Review and understand the code
 * Implement and integrate the code with the rest of the robot's system
